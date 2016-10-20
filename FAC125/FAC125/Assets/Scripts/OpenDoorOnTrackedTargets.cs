@@ -7,7 +7,7 @@ public class OpenDoorOnTrackedTargets : MonoBehaviour {
 	private TrackTargets tt;
 	
 	public float openSpeed;
-	public Vector3 startingPosition, startingRotation, endingPosition, endingRotation;
+	public Vector3 startingPosition, startingRotation, startingScale, endingPosition, endingRotation, endingScale;
 	
 	// Use this for initialization
 	void Start () {
@@ -19,9 +19,11 @@ public class OpenDoorOnTrackedTargets : MonoBehaviour {
 		if(!tt.AllTargetsActive()){
 			transform.position = Vector3.Lerp(transform.position, startingPosition, openSpeed * Time.deltaTime);
 			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(startingRotation), openSpeed * Time.deltaTime);
+			transform.localScale = Vector3.Lerp(transform.localScale, startingScale, openSpeed * Time.deltaTime);
 		}else{
 			transform.position = Vector3.Lerp(transform.position, endingPosition, openSpeed * Time.deltaTime);
 			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(endingRotation), openSpeed * Time.deltaTime);
+			transform.localScale = Vector3.Lerp(transform.localScale, endingScale, openSpeed * Time.deltaTime);
 		}
 	}
 }

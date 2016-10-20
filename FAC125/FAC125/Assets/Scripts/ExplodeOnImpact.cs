@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ExplodeOnImpact : MonoBehaviour {
 
-	public Explodable exp;
+	private Explodable exp;
 	
 	// Use this for initialization
 	void Start () {
@@ -13,7 +13,7 @@ public class ExplodeOnImpact : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
 		Vector3 forward = transform.position + (transform.up * (GetComponent<BoxCollider2D>().size.y * transform.localScale.y * 1.25f));
-		RaycastHit2D hit = Physics2D.Raycast(forward, transform.up, 5f);
+		RaycastHit2D hit = Physics2D.Raycast(forward, transform.up, .1f);
 		if((bool)hit){
 			if(!hit.collider.gameObject.GetComponent<Rigidbody>()){
 				exp.Explode();
