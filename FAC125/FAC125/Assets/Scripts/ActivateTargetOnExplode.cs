@@ -8,11 +8,4 @@ public class ActivateTargetOnExplode : MonoBehaviour {
 			gameObject.AddComponent<Target>();
 		}
 	}
-	
-	// Update is called once per frame
-	void LateUpdate () {
-		if(ExplosionServer.checkExplosions && ExplosionServer.CheckExplosion(gameObject, transform.position)){
-			gameObject.GetComponent<Target>().activated = true;
-		}
-	}
 }

@@ -9,7 +9,7 @@ public class TrackTargets : MonoBehaviour {
 	
 	public bool AllTargetsActive() {
 		bool toReturn = true, hitFalse = false;
-		for(int i = 0; i < trackThese.Count; i++){
+		for(int i = trackThese.Count-1; i >=0 ; i++){
 			if(!hitFalse){
 				if(!trackThese[i].activated){
 					toReturn = false;

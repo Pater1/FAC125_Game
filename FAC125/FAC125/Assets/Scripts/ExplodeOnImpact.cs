@@ -15,7 +15,7 @@ public class ExplodeOnImpact : MonoBehaviour {
 		Vector3 forward = transform.position + (transform.up * (GetComponent<BoxCollider2D>().size.y * transform.localScale.y * 1.25f));
 		RaycastHit2D hit = Physics2D.Raycast(forward, transform.up, .1f);
 		if((bool)hit){
-			if(!hit.collider.gameObject.GetComponent<Rigidbody>()){
+			if(!hit.collider.gameObject.GetComponent<Rigidbody2D>()){
 				exp.Explode();
 				GameObject.Destroy(gameObject);
 			}

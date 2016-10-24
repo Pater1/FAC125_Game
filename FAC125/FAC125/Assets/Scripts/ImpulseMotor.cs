@@ -25,6 +25,11 @@ public class ImpulseMotor : MonoBehaviour {
 				linearMomentum = Vector3.Lerp(linearMomentum, sustainedThrust * input.y*.5f * transform.up,linearFriction * Time.deltaTime);
 			}
 		}
+		
+		RaycastHit2D hit = Physics2D.Raycast((Vector2)(transform.position + (linearMomentum/linearMomentum.magnitude)*8), (Vector2)(linearMomentum/linearMomentum.magnitude), 2.5f);
+		if((bool)hit){
+			linearMomentum = new Vector3();
+		}
 		transform.position += linearMomentum;
 		
 		if(input.x != 0){

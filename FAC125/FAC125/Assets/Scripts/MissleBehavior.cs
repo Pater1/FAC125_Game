@@ -17,7 +17,7 @@ public class MissleBehavior : MonoBehaviour {
 	void FixedUpdate () {
 		transform.position += transform.up * velocity * Time.deltaTime;
 		velocity += acceleration * Time.deltaTime;
-		if(Vector3.Distance(gameObject.transform.position, startingPosition) > range){
+		if(Vector3.Distance(gameObject.transform.position, startingPosition) > range && range > 0){
 			GameObject.Destroy(gameObject);
 		}
 	}
