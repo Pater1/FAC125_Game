@@ -1,0 +1,29 @@
+Mono path[0] = 'D:/FAC125_Game/Builds/AlphaBuild7_x86-64/AlphaBuild7_Data/Managed'
+Mono path[1] = 'D:/FAC125_Game/Builds/AlphaBuild7_x86-64/AlphaBuild7_Data/Mono'
+Mono config path = 'D:/FAC125_Game/Builds/AlphaBuild7_x86-64/AlphaBuild7_Data/Mono/etc'
+PlayerConnection initialized from D:/FAC125_Game/Builds/AlphaBuild7_x86-64/AlphaBuild7_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55428
+Multi-casting "[IP] 192.168.1.105 [Port] 55428 [Flags] 2 [Guid] 387491805 [EditorId] 3269081420 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-OUPCIS9) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.1.105:55428]
+Initialize engine version: 5.1.1f1 (2046fc06d4d8)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA Quadro M500M (ID=0x137a)
+    Vendor:   NVIDIA
+    VRAM:     2019 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\FAC125_Game\Builds\AlphaBuild7_x86-64\AlphaBuild7_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\FAC125_Game\Builds\AlphaBuild7_x86-64\AlphaBuild7_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\FAC125_Game\Builds\AlphaBuild7_x86-64\AlphaBuild7_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\FAC125_Game\Builds\AlphaBuild7_x86-64\AlphaBuild7_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\FAC125_Game\Builds\AlphaBuild7_x86-64\AlphaBuild7_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\FAC125_Game\Builds\AlphaBuild7_x86-64\AlphaBuild7_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\FAC125_Game\Builds\AlphaBuild7_x86-64\AlphaBuild7_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\FAC125_Game\Builds\AlphaBuild7_x86-64\AlphaBuild7_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\FAC125_Game\Builds\AlphaBuild7_x86-64\AlphaBuild7_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\FAC125_Game\Builds\AlphaBuild7_x86-64\AlphaBuild7_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.194 seconds
+desktop: 2560x1440 60Hz; virtual: 2560x1440 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.

@@ -9,7 +9,7 @@ public class TrackTargets : MonoBehaviour {
 	
 	public bool AllTargetsActive() {
 		bool toReturn = true, hitFalse = false;
-		for(int i = trackThese.Count-1; i >=0 ; i++){
+		for(int i = 0; i < trackThese.Count; i++){
 			if(!hitFalse){
 				if(!trackThese[i].activated){
 					toReturn = false;
@@ -31,11 +31,9 @@ public class TrackTargets : MonoBehaviour {
 		return toReturn;
 	}
 	
-	//debug
-	/*
-	public bool allActivated = false;
-	void LateUpdate(){
-		allActivated = AllTargetsActive();
+	public void Reset(){
+		for(int i = 0; i < trackThese.Count; i++){
+			trackThese[i].activated = false;
+		}
 	}
-	*/
 }

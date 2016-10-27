@@ -8,6 +8,7 @@ public class Explosion : MonoBehaviour {
 	
 	private List<Target> targs = new List<Target>();
 	private List<Explodable> explodes = new List<Explodable>();
+	private List<Health> hps = new List<Health>();
 	private float spacing = 1f;
 	private static int resolution = 10;
 	
@@ -34,6 +35,9 @@ public class Explosion : MonoBehaviour {
 				if(hit.collider.gameObject.GetComponent<Explodable>() && !explodes.Contains(hit.collider.gameObject.GetComponent<Explodable>())){
 					explodes.Add(hit.collider.gameObject.GetComponent<Explodable>());
 				}
+				if(hit.collider.gameObject.GetComponent<Health>() && !hps.Contains(hit.collider.gameObject.GetComponent<Health>())){
+					hps.Add(hit.collider.gameObject.GetComponent<Health>());
+				}
 			}
 		}
 	}
@@ -44,6 +48,9 @@ public class Explosion : MonoBehaviour {
 		}
 		foreach(Explodable exp in explodes){
 			if(exp != null) exp.Explode();
+		}
+		foreach(Health hp in hps){
+			if(hp != null) hp.hp--;
 		}
 	}
 }

@@ -8,6 +8,10 @@ public class FollowObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		if(followThis == null){
+			followThis = GameObject.FindGameObjectWithTag("Player");
+			return;
+		}
 		transform.position = followThis.transform.position + offset;
 	}
 }

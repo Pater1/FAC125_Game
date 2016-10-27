@@ -3,22 +3,16 @@ using System.Collections;
 
 [ExecuteInEditMode]
 public class OpenDoorOnTrackedTargets : MonoBehaviour {
-
-	private TrackTargets tt;
-	
 	[Range(0,1)]
 	public float openness = 0;
 	public float openSpeed;
 	public Vector3 startingPosition, startingRotation, startingScale, endingPosition, endingRotation, endingScale;
 	public GameObject doorBase;
 	
-	// Update is called once per frame
 	void Update () {
-		if(tt == null){
-			tt = (TrackTargets)gameObject.GetComponent("TrackTargets");
-		}
-		
-		if(!tt.AllTargetsActive()){
+		if( !((!gameObject.GetComponent("TrackTargets") || gameObject.GetComponent<TrackTargets>().AllTargetsActive()) 
+			&& (!gameObject.GetComponent("TrackBoss") || gameObject.GetComponent<TrackBoss>().TargetsDead()))
+			){
 			openness = Mathf.Lerp(openness, 0, openSpeed * Time.deltaTime);
 		}else{
 			if(openness < 0.1f){
